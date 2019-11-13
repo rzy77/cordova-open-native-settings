@@ -40,6 +40,8 @@ public class NativeSettings extends CordovaPlugin {
 
         if (action.equals("accessibility")) {
             intent = new Intent(android.provider.Settings.ACTION_ACCESSIBILITY_SETTINGS);
+        } else if (action.equals("notification_access")) {
+            intent = new Intent(android.provider.Settings.ACTION_NOTIFICATION_LISTENER_SETTINGS);
         } else if (action.equals("account")) {
             intent = new Intent(android.provider.Settings.ACTION_ADD_ACCOUNT);
         } else if (action.equals("airplane_mode")) {
